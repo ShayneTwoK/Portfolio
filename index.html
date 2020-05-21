@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/css/bootstrap.css">
+  <!-- Font non utilisé style un peu dessin -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka+the+Great">
+  <link rel="stylesheet" href="fontawesome-5.8.1/css/all.css">
+  <link rel="stylesheet" href="fontawesome-5.8.1/css/fontawesome.css">
+  <link rel="stylesheet" href="fontawesome-5.8.1/css/v4-shims.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1/css/timeline.css">
+
+  <title>Portfolio - Khaldi Shaïnee</title>
+</head>
+
+<body>
+
+  <span class="ancres" id="accueil"></span>
+  <!-- Barre de Navigation -->
+  <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark p-3">
+    <a class="navbar-brand" href="#accueil">KHALDI Shainee</a>
+    <!-- Burger -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Items NAV LEFT -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#competences">Compétences</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#parcours">Mon Parcours</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projets">Projets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#veille">Veille Technologique</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Contactez-Moi !</a>
+        </li> -->
+      </ul>
+    </div>
+    <!-- Items NAV RIGHT -->
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/sha%C3%AFnee-khaldi-37828814b/"><i
+              class="fab fa-linkedin-in fa-lg"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ShayneTwoK"><i class="fab fa-github-alt fa-lg"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://stackoverflow.com/users/11315847/shainee-khaldi?tab=profile"><i
+              class="fab fa-stack-overflow fa-lg"></i></a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- CAROUSEL NAV -->
+  <section class="d-flex bg-light py-5">
+    <div class="container pt-5">
+      <!-- Titre de la section CAROUSEL -->
+      <!-- Peut-etre ?-->
+
+      <div id="carousel3dnav" class="justify-content-center pt-4">
+        <carousel-3d class="disable-user-select">
+          <slide :index="0">
+            <img class="img-fluid h-100" src="upload/SliderImages/info1.jpg">
+          </slide>
+          <slide :index="1">
+            <img class="img-fluid h-100" src="upload/SliderImages/info2.jpg">
+          </slide>
+          <slide :index="2">
+            <img class="img-fluid h-100" src="upload/SliderImages/info3.jpg">
+          </slide>
+          <slide :index="3">
+            <img class="img-fluid h-100" src="upload/SliderImages/info4.jpg">
+          </slide>
+          <slide :index="4">
+            <img class="img-fluid h-100" src="upload/SliderImages/info5.jpg">
+          </slide>
+          <slide :index="5">
+            <img class="img-fluid h-100" src="upload/SliderImages/info6.jpeg">
+          </slide>
+          <slide :index="6">
+            <img class="img-fluid h-100" src="upload/SliderImages/info7.jpg">
+          </slide>
+          <slide :index="7">
+            <img class="img-fluid h-100" src="upload/SliderImages/info8.jpg">
+          </slide>
+        </carousel-3d>
+      </div>
+    </div>
+  </section>
+
+  <!-- span invisible permettant de bien positionné l'ancre quand
+      on clique sur un lien dans la nav a cause du fixed-top qui obstrué le section-heading -->
+  <span class="ancres" id="competences"></span>
+
+  <!-- COMPÉTENCES -->
+  <section class="d-flex bg-EGrey py-5">
+    <div class="container">
+      <!-- Titre de la section Compétences -->
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="section-heading text-uppercase">compétences</h1>
+          <h3 style="font-size: 16px; font-family: Baukasten;" class="section-subheading text-muted mb-5">
+            Visuel sur ce que j'ai appris et experimenté</h3>
+        </div>
+      </div>
+      <!-- Tableau langages -->
+      <div class="row text-center shadow-lg rounded">
+
+        <div class="col my-auto align-self-stretch tab" style="max-width: 638px;">
+          <!-- Chart Front-end -->
+          <canvas id="FrontChart"></canvas>
+        </div>
+
+        <div class="col align-self-end donut" style="max-width: 500px; max-height: 600px;">
+          <!-- Chart Programmation -->
+          <canvas class="" id="PrograChart"></canvas>
+          <!-- Chart Back-end -->
+          <canvas class="" id="BackChart"></canvas>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ESSAYE DE FAIRE UN EVENT SCROLL QUI DETECTE QUAND ON PASSE SUR CHAQUE
+      ICON OU DIV ICON, SA ANIME LES ICONES !! -->
+
+  <span class="ancres" id="parcours"></span>
+  <!-- MON PARCOURS -->
+  <section class="d-flex bg-light py-5">
+    <div class="container">
+      <!-- Titre de la section Mon Parcours -->
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="section-heading text-uppercase">mon parcours</h1>
+          <h3 style="font-size: 16px; font-family: Baukasten;" class="section-subheading text-muted mb-5">
+            L'informatique. Le chemin que j'ai pris pour y parvenir</h3>
+        </div>
+      </div>
+      <!-- Timeline résumant mon parcours de l'année d'obtention du BAC STMG
+            jusqu'à mon projet professionnel futur après le BTS SIO -->
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="main-timeline7">
+
+
+              <div class="timeline">
+                <div class="timeline-icon"><i class="fa fa-briefcase""></i></div>
+                        <span class=" year">04/03/2019 - 12/04/2019</span>
+                    <div class="timeline-content">
+                      <h5 class="title">Stage 2ème Année de BTS SIO</h5>
+                      <h6>GrizzlyDev</h6>
+                      <p class="description">
+                          <strong>Objectifs</strong> : Permettre a l'élève de redecouvrir le monde professionelle.
+                          Etablit à GrizzlyDev mes 2 principales missions sont : <strong>RDSAdmin une application informatique</strong> de gestion de session connecté à distance
+                          et <br><strong>MailSearch une application Web</strong> fonctionnant comme un moteur de recherche mais pour listé les mails de l'entreprise.
+                      </p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                  <div class="timeline-icon"><i class="fa fa-code"></i></div>
+                  <span class="year">21/09/2018 - 15/02/2019</span>
+                  <div class="timeline-content">
+                    <h5 class="title">Acteur d'un projet de développement web</h5>
+                    <h6>Lycée Ella Fitzgerald - Saint Romain en Gal</h6>
+                    <p class="description">
+                        <strong>Objectifs</strong> : S'entrainer sur un sujet fictif mais réaliste répartit en 3 mission : <br><strong>VideoRecrut</strong> une
+                        plateforme web de recrutement afin de géré des utilisateurs, <br><strong>AppEval</strong> une solution logiciels avec un base de donnés synchronisés
+                        avec ODOO, un ERP, et enfin <br><strong>Kontact</strong> une application mobiles qui elle sera en Web Services avec la base de données de AppEval.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline">
+                  <div class="timeline-icon"><i class="fa fa-graduation-cap"></i></div>
+                  <span class="year">2018 - 2019</span>
+                  <div class="timeline-content">
+                    <h5 class="title">BTS SIO 2ème Année</h5>
+                    <span style="font-size: 20px;">Option Solutions Logicielles et Applications Métiers</span>
+                    <p class="description">    
+                        <strong>Objectifs</strong> : Se former aux compétences de <strong>web design</strong> et de la <strong>POO</strong> via de nouveau langage tels que
+                        le Java, le PostegreSQL mais aussi de <strong>nouvelle technologies</strong> comme l'AJAX, le JSON, Javascript...
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline">
+                  <div class="timeline-icon"><i class="fa fa-briefcase""></i></div>
+                    <span class=" year">28/05/2018 - 29/06/2018</span>
+                      <div class="timeline-content">
+                        <h5 class="title">Stage 1ère Année de BTS SIO</h5>
+                        <h6>Sailing Communication & Technologies</h6>
+                        <p class="description">
+                            <strong>Besoins</strong> : Exprime le désir de posseder un site web, pour gagner de la clientèle
+                            <br><strong>Objectifs</strong> : étendre sa notoriété et fidéliser ces clients
+                        </p>
+                      </div>
+                  </div>
+
+                  <div class="timeline">
+                    <div class="timeline-icon"><i class="fa fa-code"></i></div>
+                    <span class="year">04/12/2017 - 01/05/2018</span>
+                    <div class="timeline-content">
+                      <h5 class="title">Image et Musique</h5>
+                      <p class="description">
+                      <strong>Deuxième projet</strong> implicant une entreprise cette fois ci dans le Service de réparation
+                        d'équipements audiovisuels (Vienne 38200)
+                        <br><strong>Besoins</strong> : Exprime le désir de posseder un site web, pour gagner de la clientèle
+                        <br><strong>Objectifs</strong> : étendre sa notoriété et fidéliser ces clients
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="timeline">
+                    <div class="timeline-icon"><i class="fa fa-graduation-cap"></i></div>
+                    <span class="year">2017 - 2018</span>
+                    <div class="timeline-content">
+                      <h5 class="title">BTS SIO 1ère Année</h5>
+                      <span style="font-size: 20px;">Option Solutions Logicielles et Applications Métiers</span>
+                      <h6 class="mt-1">Lycée Ella Fitzgerald - Saint Romain en Gal</h6>
+                      <p class="description">
+                        Reçu en 1ère année en BTS Services Informatiques aux Organisations, forme aux métiers techniques
+                        de l'informatique dans les domaine Réseaux (SISR) et en Développement (SLAM)
+                        <br><strong>Objectifs</strong> :
+                        <br>&emsp;- Prendre connaissance des bases d'une infrastucture réseau <strong>Modèle
+                          TCP/IP</strong>
+                        <br>&emsp;- Établir une réflexion sur la <strong>continuité d'un projet informatique</strong> et
+                        <strong>les solutions à apporter</strong>
+                        <br>&emsp;- Apprendre de nouveaux langages de programmations tels que le <strong>C#</strong> et
+                        les concepts de <strong>Programmation Orienté Objet</strong>
+                        et de poursuivre pour integré <strong>l'option SLAM</strong> orienté <strong>développement
+                          logiciel</strong> et <strong>application web</strong>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="timeline">
+                    <div class="timeline-icon"><i class="fa fa-code"></i></div>
+                    <span class="year">04/09/2016 - 19/05/2017</span>
+                    <div class="timeline-content">
+                      <h5 class="title">No Loading</h5>
+                      <p class="description">
+                      <strong>Premier Projet</strong> implicant une <em>Entreprise de distribution de jeux-vidéo</em> No Loading (Vienne 38200),
+                        en experimentant ma première approche du <em>monde professionnel</em>
+                        <br><strong>Besoins</strong> : Visibilité et Communication sur ces produits, être informer des
+                        goûts de sa clientèle, afin de s'adapter a la demande
+                        <br><strong>Objectifs</strong> : Élargir sa <strong>Notoriété</strong> et faire la
+                        <strong>Promotion</strong> de ces produits
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="timeline">
+                    <div class="timeline-icon"><i class="fa fa-graduation-cap"></i></div>
+                    <span class="year">2016 - 2017</span>
+                    <div class="timeline-content">
+                      <h5 class="title">BAC STMG</h5>
+                      <span style="font-size: 20px;">Option Systèmes Information de Gestion</span>
+                      <h6 class="mt-1">Lycée Ella Fitzgerald - Saint Romain en Gal</h6>
+                      <p class="description">
+                        Mes débuts dans la gestion d'un projet en étudiant des <strong>schémas du parcours utilisateurs
+                          (diagramme UML)</strong>, en construisant mes bases en
+                        <strong>Programmation web</strong> avec les langages : <strong>HTML</strong> pour le
+                        représentation; <strong>CSS</strong> pour le rendu graphique;
+                        <strong>PHP</strong> pour la relation <strong>Client/Serveur</strong> dynamique;
+                        <strong>SQL</strong> pour la gestion de base de données et mes premières requêtes
+                        <strong>CRUD</strong>;
+                        <strong>Javascript</strong> pour rendre rendre le site dynamique et ergonomique graphiquement
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+  </section>
+
+  <span class="ancres" id="projets"></span>
+  <!-- PROJETS -->
+  <section class="d-flex bg-EGrey py-5">
+    <div class="container">
+      <!-- Titre de la section Projet -->
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="section-heading text-uppercase">Projets</h1>
+          <h3 style="font-size: 16px; font-family: Baukasten;" class="section-subheading text-muted mb-5">
+            Le résultat de mes expériences professionnelles</h3>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row d-flex flex-wrap">
+
+          <div class="col-md-4 pb-5">
+            <div class="bg-light shadow-sm">
+              <!-- Lien qui active le modal -->
+              <a href="" data-toggle="modal" data-target="#modalMailSearch">
+                <!-- div overlay par dessus l'image -->
+                <div class="overlay text-center">
+                  <div class="logo mx-auto "><img class="img-fluid" style="width: 90%;"
+                      src="upload/logoEntrepriseProjets/logoGrizzlyDev.png" /></div>
+                </div>
+              </a>
+              <img class="img-defini" src="upload/SectionProjets/MailSearch.png">
+              <div class="text-center pt-4 pb-2">
+                <h4>MailSearch</h4>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Application web</p>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Interface de recherche mails
+                  internes</p>
+                <p class="text-muted" style="font-size: 16px; font-family: Baukasten;">GrizzlyDev</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 pb-5">
+            <div class="bg-light shadow-sm">
+              <!-- Lien qui active le modal -->
+              <a href="" data-toggle="modal" data-target="#modalRDSAdmin">
+                <!-- div overlay par dessus l'image -->
+                <div class="overlay text-center">
+                  <div class="logo mx-auto "><img class="img-fluid" style="width: 90%;"
+                      src="upload/logoEntrepriseProjets/logoGrizzlyDev.png" /></div>
+                </div>
+              </a>
+              <img class="img-defini" src="upload/SectionProjets/RDSAdmin.png">
+              <div class="text-center pt-4 pb-2">
+                <h4>RDS Admin</h4>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Application informatique</p>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Gestion des serveurs</p>
+                <p class="text-muted" style="font-size: 16px; font-family: Baukasten;">GrizzlyDev</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 pb-5">
+            <div class="bg-light shadow-sm">
+               <!-- Lien qui active le modal -->
+               <a href="" data-toggle="modal" data-target="#modalKontact">
+                <!-- div overlay par dessus l'image -->
+                <div class="overlay text-center">
+                  <div class="logo mx-auto"><img class="img-fluid" style="width: 80%;"
+                      src="upload/logoEntrepriseProjets/logoE-Kara2.png" /></div>
+                </div>
+              </a>
+              <img class="img-defini" src="upload/SectionProjets/Kontact.PNG">
+              <div class="text-center pt-4 pb-2">
+                <h4>Kontact</h4>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Application mobile</p>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Gestion des contacts commerciales
+                </p>
+                <p class="text-muted" style="font-size: 16px; font-family: Baukasten;">e-Kara</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 pb-5">
+            <div class="bg-light shadow-sm">
+                <!-- Lien qui active le modal -->
+                <a href="" data-toggle="modal" data-target="#modalAppEval">
+                <!-- div overlay par dessus l'image -->
+                <div class="overlay text-center">
+                  <div class="logo mx-auto "><img class="img-fluid" style="width: 90%;"
+                      src="upload/logoEntrepriseProjets/logoE-Kara2.png" /></div>
+                </div>
+              </a>
+              <img class="img-defini" src="upload/SectionProjets/AppEval.PNG">
+              <div class="text-center pt-4 pb-2">
+                <h4>AppEval</h4>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Application informatique</p>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Gestion des recrutement</p>
+                <p class="text-muted" style="font-size: 16px; font-family: Baukasten;">e-Kara</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 pb-5">
+            <div class="bg-light shadow-sm">
+                <!-- Lien qui active le modal -->
+                <a href="" data-toggle="modal" data-target="#modalVideoRecrut">
+                <!-- div overlay par dessus l'image -->
+                <div class="overlay text-center">
+                  <div class="logo mx-auto "><img class="img-fluid" style="width: 90%;"
+                      src="upload/logoEntrepriseProjets/logoE-Kara2.png" /></div>
+                </div>
+              </a>
+              <img class="img-defini" src="upload/SectionProjets/VideoRecrut.PNG">
+              <div class="text-center pt-4 pb-2">
+                <h4>VideoRecrut</h4>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Application web</p>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Gestion des offres emplois</p>
+                <p class="text-muted" style="font-size: 16px; font-family: Baukasten;">e-Kara</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 pb-5">
+            <div class="bg-light shadow-sm">
+                <!-- Lien qui active le modal -->
+                <a href="" data-toggle="modal" data-target="#modalArmeeTerre">
+                <!-- div overlay par dessus l'image -->
+                <div class="overlay text-center">
+                  <div class="logo mx-auto "><img class="img-fluid" style="width: 90%;"
+                      src="upload/logoEntrepriseProjets/logoSailingC&T.png" /></div>
+                </div>
+              </a>
+              <img class="img-defini" src="upload/SectionProjets/ArméeTerre.png">
+              <div class="text-center pt-4 pb-2">
+                <h4>Armée de Terre</h4>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Application web</p>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Maintenance évolutive - Formulaire
+                </p>
+                <p class="text-muted" style="font-size: 16px; font-family: Baukasten;">Sailing Communications &
+                  Technologies</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 pb-5">
+            <div class="bg-light shadow-sm">
+                <!-- Lien qui active le modal -->
+                <a href="" data-toggle="modal" data-target="#modalImaEtMus">
+                <!-- div overlay par dessus l'image -->
+                <div class="overlay text-center">
+                  <div class="logo mx-auto "><img class="img-fluid" style="width: 100%;"
+                      src="upload/logoEntrepriseProjets/logoImEtMus.png" /></div>
+                </div>
+              </a>
+              <img class="img-defini" src="upload/SectionProjets/ImageEtMusique.PNG">
+              <div class="text-center pt-4 pb-2">
+                <h4>Image et Musique</h4>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Application web</p>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Site vitrine
+                  informatique/audiovisuel</p>
+                <p class="text-muted" style="font-size: 16px; font-family: Baukasten;">Image et Musique</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 pb-5">
+            <div class="bg-light shadow-sm">
+                <!-- Lien qui active le modal -->
+                <a href="" data-toggle="modal" data-target="#modalNLD">
+                <!-- div overlay par dessus l'image -->
+                <div class="overlay text-center">
+                  <div class="logo mx-auto "><img class="img-fluid" style="width: 90%;"
+                      src="upload/logoEntrepriseProjets/logoNLD3.png" /></div>
+                </div>
+              </a>
+              <img class="img-defini" src="upload/SectionProjets/NoLoading.png">
+              <div class="text-center pt-4 pb-2">
+                <h4>No Loading</h4>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Application web</p>
+                <p class="mx-1 my-1" style="font-size: 17px; font-family: Baukasten;">Site vitrine jeux-vidéos</p>
+                <p class="text-muted" style="font-size: 16px; font-family: Baukasten;">No Loading</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <span class="ancres" id="veille"></span>
+  <!-- VEILLE TECHNOLOGIQUE -->
+  <section class="d-flex bg-light py-5">
+    <div class="container">
+      <!-- Titre de la section Veille Technologique -->
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="section-heading text-uppercase">Veille Technologique</h1>
+          <h3 style="font-size: 16px; font-family: Baukasten;" class="section-subheading text-muted mb-5">
+            Le rassemblement de toute mes connaissances</h3>
+        </div>
+      </div>
+      <div class="container">
+          <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="https://1min30.com/developpement-web/les-indispensables-dune-veille-efficace-en-tant-que-developpeurintegrateur-85535">
+           <i class="fas fa-info-circle fa-lg"></i> Lien Externe aide Veille Technologique</a>
+        </br>
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/Veille Technologique/Fonctionnalités C.pdf"> <i class="far fa-file-pdf fa-2x"></i> PDF Fonctionnalités C++</a>
+        </br>
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/Veille Technologique/La Neutralité du Net FRANCAIS.pdf"> <i class="far fa-file-pdf fa-2x"></i> PDF La Neutralité du Net</a>
+        </br>
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/Veille Technologique/Langages artificiels.pdf"> <i class="far fa-file-pdf fa-2x"></i> PDF Langages Artificiel</a>
+        </br>
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/Veille Technologique/Revue de Presse 09 11 2018.pdf"> <i class="far fa-file-pdf fa-2x"></i> PDF Revue de Presse 09/11/2018</a>
+        </br>
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/Veille Technologique/Revue de Presse 24 11 2018.pdf"> <i class="far fa-file-pdf fa-2x"></i> PDF Revue de Presse 24/11/2018</a>
+        </br>
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/Veille Technologique/Revue de Presse 10 12 2018.pdf"> <i class="far fa-file-pdf fa-2x"></i> PDF Revue de Presse 10/12/2018</a>
+        
+      </div>
+    </div>
+  </section>
+  <!--//////////////////// -->
+  <!-- MODALS DES PROJETS -->
+  <!--//////////////////// -->
+
+  <!-- MODAL MailSearch -->
+  <div class="modal fade" id="modalMailSearch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog cascading-modal modal-xl" role="document">
+      <!-- Content -->
+      <div class="modal-content">
+        <!-- Header -->
+        <div class="modal-header mx-auto border-danger border-bottom disable-user-select disable-user-drag">
+          <img class="rounded-circle img-responsive border img-ico" src="upload/LogoEntrepriseProjets/IcoGrizzlyDev.ico"
+            alt="icoGrizzlyDev">
+        </div>
+        <!-- Body -->
+        <div class="modal-body text-center mb-1">
+
+          <div class="text-center pb-5">
+            <h1 class="mt-1 mb-2">MailSearch</h1>
+            <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Application web</p>
+            <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Interface de recherche mails internes</p>
+            <p class="text-muted" style="font-size: 18px; font-family: Baukasten;">GrizzlyDev</p>
+          </div>
+
+          <div class="text-left mx-4">
+            <p style="font-size: 20px; font-family: Baukasten;">
+              <strong>Contexte</strong> : Stage de 2ème Année de BTS SIO dans l'entreprise GrizzlyDev
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Mise en situation</strong> : Mr GUILLIEN, Dirigeant de l'entreprise a besoin d'un site web, simple et sobre,
+                qui fonctionnera à la manière d'<strong>un moteur de recherche</strong>, pour tous <strong>les
+                  mails</strong> stockés sur les serveurs de l'entreprise</p>
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Spécification Techniques</strong> : Modéliser une interface d'interrogation d'index
+                <strong>Responsive</strong> via <strong>ElasticSearch(ELS)</strong> une base de données NoSQL
+                au format <strong>JSON</strong>, a manipulé via des <strong>requêtes AJAX</strong>, au moyen d'une
+                application web <strong>HTML5</strong>,
+                <strong>Bootstrap 4.1</strong>, <strong>Framework JQuery 3.3</strong></p>
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Contraintes</strong> :
+                </br>- Aucune connaissance sur les bases de données <strong>NoSQL</strong> et du fonctionnement des
+                requêtes AJAX/JSON
+                </br>- Première utilisation de <strong>Kibana</strong> l’interface de visualisations de données, ainsi
+                que de Bootstrap 4.1
+                </br>- Documentation importante pour ELS, Bootstrap 4.1</p>
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Démarche de réalisation proposée</strong> :
+                </br>- <strong>Formulaire</strong> avec les champs "From" pour l’expéditeur, "To" le destinataire,
+                "Date de début" et "Date de fin"
+                </br>- Optimiser et adapter pour chaque cas de <strong>recherche (partielle ou exacte)</strong>, les
+                informations, éviter les dépendances
+                </br>- Limiter le flux avec une <strong>pagination</strong>, une recherche sur la semaine si non
+                déclarée
+                </br>- Afficher les <strong>informations utiles</strong>, ranger dans un tableau puis, les plus
+                détaillées dans une section cacher</p>
+          </div>
+
+          <!--Carousel Modal MailSearch-->
+          <div class="carousel slide carousel-fade carousel-thumbnails shadow-lg mb-5 mt-5" id="carousel-thumb"
+            data-interval="false" data-ride="carousel">
+            <!-- Slides -->
+            <!-- Mettre un titre pour chaque slide -->
+            <div class="carousel-inner disable-user-select disable-user-drag" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/Mantis - Page Mission 2 Interface ELS.png"
+                  alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/ElasticSearch - Doc.PNG" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/Kibana - Recherche from recuperation data.png"
+                  alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/Kibana - Requête BDD postfix.png"
+                  alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/MailSearch - Recherche FromTo.png"
+                  alt="Fifth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/MailSearch - Recherche FromToPartial.png"
+                  alt="Sixth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/MailSearch - Recherche onlyFrom.png"
+                  alt="Seventh slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/MailSearch - Recherche onlyTo.png"
+                  alt="Eight slide">
+              </div>
+
+            </div>
+            <!-- Boutton Prev et Next -->
+            <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <!-- Indicateurs -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-thumb" data-slide-to="0" class="active">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/Mantis - Page Mission 2 Interface ELS.png"
+                  width="100">
+              </li>
+              <li data-target="#carousel-thumb" data-slide-to="1">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/ElasticSearch - Doc.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb" data-slide-to="2">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/Kibana - Recherche from recuperation data.png"
+                  width="100">
+              </li>
+              <li data-target="#carousel-thumb" data-slide-to="3">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/Kibana - Requête BDD postfix.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb" data-slide-to="4">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/MailSearch - Recherche FromTo.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb" data-slide-to="5">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/MailSearch - Recherche FromToPartial.png"
+                  width="100">
+              </li>
+              <li data-target="#carousel-thumb" data-slide-to="6">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/MailSearch - Recherche onlyFrom.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb" data-slide-to="7">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/MailSearch - Recherche onlyTo.png" width="100">
+              </li>
+
+            </ol>
+          </div>
+          </br>
+          </br>
+          <section class="py-5 bg-light">
+            <div class="container">
+              <h3 class="section-title text-center mb-5">Langages et Technologies utilisés</h3>
+              <div class="row mx-auto align">
+                <img class="img-logo" src="upload/logoDev/logoHTML5.png">
+                <img class="img-logo" src="upload/logoDev/logoBootstrap.png">
+                <img class="img-logo" src="upload/logoDev/logoJquery.jpg">
+                <img class="img-logo" src="upload/logoDev/logoAJAX.jpg">
+                <img class="img-logo" src="upload/logoDev/logoJSON.png">
+                <img style="width: 270px; height: 100px;" src="upload/logoDev/logoELS.png">
+                <img class="img-logo" src="upload/logoDev/logoMantis.png">
+                <img class="img-logo" src="upload/logoDev/logoSVN.png">
+                <img style="width: 250px; height: 120px;" src="upload/logoDev/logoVSC.png">
+                <img style="width: 250px; height: 100px;" src="upload/logoDev/logoKibana.png">
+              </div>
+            </div>
+          </section>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Bilan de la mission : </strong>
+            </br>L’application web est basique, mais conforme pour tout ce qui est fonctionnalité de recherche avancée,
+            et d’affichage lisible et simple. Pour ce qui est des informations détaillées depuis le lien « infos »,
+            la fonctionnalité a été implémenté mais l’event JQuery, n’a pas été finalisée.</p>
+
+          <div class="text-left">
+            <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+              href="upload/GrizzlyDevPhoto/SIO Compte rendu de Missions GrizzlyDev KHALDI Shaïnee.pdf"> <i
+                class="far fa-file-pdf fa-2x"></i> PDF Compte rendu des missions</a>
+            </br>
+            <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+              href="upload/GrizzlyDevPhoto/SIO stage fiche compte rendu GrizzlyDev.pdf"> <i
+                class="far fa-file-pdf fa-2x"></i> PDF Compte rendu de Stage</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- MODAL RDS Admin -->
+<div class="modal fade" id="modalRDSAdmin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+<div class="modal-dialog cascading-modal modal-xl" role="document">
+  <!-- Content -->
+  <div class="modal-content">
+    <!-- Header -->
+    <div class="modal-header mx-auto border-danger border-bottom disable-user-select disable-user-drag">
+      <img class="rounded-circle img-responsive border img-ico" src="upload/LogoEntrepriseProjets/IcoGrizzlyDev.ico"
+        alt="icoGrizzlyDev">
+    </div>
+    <!-- Body -->
+    <div class="modal-body text-center mb-1">
+
+      <div class="text-center pb-5">
+        <h1 class="mt-1 mb-2">RDSAdmin</h1>
+        <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Application informatique</p>
+        <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Gestion des serveurs</p>
+        <p class="text-muted" style="font-size: 18px; font-family: Baukasten;">GrizzlyDev</p>
+      </div>
+
+      <div class="text-left mx-4">
+        <p style="font-size: 20px; font-family: Baukasten;">
+          <strong>Contexte</strong> : Stage de 2ème Année de BTS SIO dans l'entreprise GrizzlyDev
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Mise en situation</strong> : Mr GUILLIEN, Dirigeant de l'entreprise a besoin d'une application informatique,
+            lui permettant d'avoir main prise sur <strong>les sessions</strong> connecté sur ces serveurs, qui fonctionnera à la manière de
+            <strong>Windows Remote Desktop Manager</strong>, en plus simpliste afin d'alléger la bande passante des serveurs</p>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Spécification Techniques</strong> : Représenter en WindowsForm un espace de visualisation des personnes connectées sur un ou plusieurs serveurs
+            <strong>Bureau à distance</strong> (Windows RDS) en <strong>Windows Form responsive</strong>, avec <strong>VB.NET</strong>. L'utilisateur pourra <strong>déconnecter une session</strong>,
+            <strong>actualiser le form</strong>, puis <strong>supprimer et ajouté un serveur</strong>, tout en disposant d'une <strong>sauvegarde des serveurs ajoutés</strong>,
+             ainsi que l'heure de la derniere mise à jour. Le logiciel s'adaptera a un poste contenant un serveur local, et devra être compatible <strong>Windows Server 2008 à 2016</strong></p>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Contraintes</strong> :
+            </br>- Travail de documentation sur le fonctionnement d’une <strong>infrastructure réseau</strong>, des packages réseau Windows Terminal Services, et du langage VB.NET
+            non experimenté jusqu'ici
+            </br>- Ré-assimilé les bases de la <strong>POO</strong>, manipuler un <strong>fichier configuration en XML</strong>, rendre les <strong>fonctions dynamique</strong> et <strong>ergonomique</strong> au possible
+            </br>- Apprendre la responsivité en Windows Form</p>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Démarche de réalisation proposée</strong> :
+            </br>- Optimiser et adapter ces méthodes, afin de le rendre ergonomique
+            </br>- <strong>Interface Windows Form</strong> qui accueillera les informations dans une <strong>DataGridView</strong>
+            </br>- Utiliser le <strong>package Cassia</strong>, utilisant des fonctions similaire à Windows Terminal Services
+            </br>- Déterminer les <strong>informations pertinentes</strong> à afficher(durée d'inactivité, adresse IP, état...)
+            </br>- Les informations temporel comme la durée d'inactivité, seront <strong>formatés</strong> pour plus de lisibilité
+            </br>- Sauvegardes des serveurs sur un fichier config XML</p>
+      </div>
+
+          <!--Carousel Modal MailSearch-->
+          <div class="carousel slide carousel-fade carousel-thumbnails shadow-lg mb-5 mt-5" id="carousel-thumb2"
+            data-interval="false" data-ride="carousel">
+            <!-- Slides -->
+            <!-- Mettre un titre pour chaque slide -->
+            <div class="carousel-inner disable-user-select disable-user-drag" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/E-mail - Mantis Bug Tracker, e-mail pro.png"
+                  alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/RDS Windows sur le serveur Interne.png" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/E-mail - Pro.png"
+                  alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/Mantis - Page Mission 1 Gestionnaire RDP.png"
+                  alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/WinRDSAdmin - Affichage a l'ouverture.png"
+                  alt="Fifth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/WinRDSAdmin - fonction fermer session.png"
+                  alt="Sixth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/WinRDSAdmin - fenetre ajout serveur.png"
+                  alt="Seventh slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/Mantis - Page 3 Rapporter un bug.png"
+                  alt="Eight slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/GrizzlyDevPhoto/Mantis - Visuel sur les bogues.png"
+                  alt="Nineth slide">
+              </div>
+            </div>
+            <!-- Boutton Prev et Next -->
+            <a class="carousel-control-prev" href="#carousel-thumb2" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-thumb2" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <!-- Indicateurs -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-thumb2" data-slide-to="0" class="active">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/E-mail - Mantis Bug Tracker, e-mail pro.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb2" data-slide-to="1">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/RDS Windows sur le serveur Interne.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb2" data-slide-to="2">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/E-mail - Pro.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb2" data-slide-to="3">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/Mantis - Page Mission 1 Gestionnaire RDP.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb2" data-slide-to="4">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/WinRDSAdmin - Affichage a l'ouverture.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb2" data-slide-to="5">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/WinRDSAdmin - fonction fermer session.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb2" data-slide-to="6">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/WinRDSAdmin - fenetre ajout serveur.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb2" data-slide-to="7">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/Mantis - Page 3 Rapporter un bug.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb2" data-slide-to="8">
+                <img class="thumbnails" src="upload/GrizzlyDevPhoto/Mantis - Visuel sur les bogues.png" width="100">
+              </li>
+            </ol>
+          </div>
+      </br>
+      </br>
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h3 class="section-title text-center mb-5">Langages et Technologies utilisés</h3>
+          <div class="row mx-auto align">
+            <img class="img-logo" src="upload/logoDev/logoVBNET.png">
+            <img style="width: 250px; height: 120px;" src="upload/logoDev/logoVS.png">
+            <img class="img-logo" src="upload/logoDev/logoXML.png">
+            <img class="img-logo" src="upload/logoDev/logoSVN.png">
+            <img style="width: 250px; height: 200px;" src="upload/logoDev/logoWTS.png">
+          </div>
+        </div>
+      </section>
+      <p style="font-size: 20px; font-family: Baukasten;">
+        <strong>Bilan de la mission : </strong>
+        </br>Les fonctionnalités principales ont été implémenter.
+        La suppression d’un serveur est incomplète, manque encore de connaissance sur
+        la manipulation d’un fichier configuration en XML. Cette mission m’aura permis de retravailler
+        la POO plus dans la pratique mais aussi dans la théorie bien qu’il me manque certaine
+        mécanique d’algorithmie pour pouvoir m’en sortir.</p>
+
+      <div class="text-left">
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/GrizzlyDevPhoto/SIO Compte rendu de Missions GrizzlyDev KHALDI Shaïnee.pdf"> <i
+            class="far fa-file-pdf fa-2x"></i> PDF Compte rendu des missions</a>
+        </br>
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/GrizzlyDevPhoto/SIO stage fiche compte rendu GrizzlyDev.pdf"> <i
+            class="far fa-file-pdf fa-2x"></i> PDF Compte rendu de Stage</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- MODAL Kontact -->
+<div class="modal fade" id="modalKontact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+<div class="modal-dialog cascading-modal modal-xl" role="document">
+  <!-- Content -->
+  <div class="modal-content">
+    <!-- Header -->
+    <div class="modal-header mx-auto border-danger border-bottom disable-user-select disable-user-drag">
+      <img class="rounded-circle img-responsive border img-ico" style="width: 400px; height: 300px;" src="upload/LogoEntrepriseProjets/logoE-Kara2Noir.png"
+        alt="icoEKara">
+    </div>
+    <!-- Body -->
+    <div class="modal-body text-center mb-1">
+
+      <div class="text-center pb-5">
+        <h1 class="mt-1 mb-2">Kontact</h1>
+        <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Application mobile</p>
+        <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Gestion des contacts commerciales</p>
+        <p class="text-muted" style="font-size: 18px; font-family: Baukasten;">e-Kara</p>
+      </div>
+
+      <div class="text-left mx-4">
+        <p style="font-size: 20px; font-family: Baukasten;">
+          <strong>Contexte</strong> : Projet Professionel Encadré par l'établissement Ella Fitzgerald en 2ème Année de BTS SIO
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Mise en situation</strong> : e-Kara souhaite se doter d’une <strong>application mobile</strong> permettant de garder la trace des contacts
+            développés sur un salon. L’application mobile devra permettre d’enregistrer un certain nombre d’informations aux acheteurs/partenaires rencontrés.
+            Une nouvelle fois e-Kara a sollicité la société Interway dans lequel vous travailler pour développer cette solution mobile</p>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Spécification Techniques</strong> : L'application poura être utilisé en mode déconnecté. Des <strong>fonctionalités</strong> tel que l'ajout
+            d'un salon, d'un contact et de ces coordonnées. La base de données sera embarqué en <strong>SQLite</strong>. Les données seront synchronisés grâce
+            a la mise en place d'un <strong>Web Service Apache</strong> en <strong>PHP</strong>, et enverra ces données dans une autre base de données <strong>PostegreSQL</strong> de l'<strong>ERP ODOO</strong></p>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Contraintes</strong> :
+            </br>- Se coordonner avec mes <strong>coéquipiers réseau</strong> pour la mise en place de ODOO
+            </br>- Mise en place d'un <strong>web service</strong>, relié à ODOO et SQLite
+            </br>- Assimilé les subtilités du langage <strong>Java</strong> et de la plateforme <strong>AndroidStudio</strong>
+
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Démarche de réalisation proposée</strong> :
+            </br>- Conceptualiser les <strong>deux bases de données</strong> PgSql et SQLite
+            </br>- Mise en place d'un Web Service sur un serveur Apache à l'aide de <strong>script PHP en flux JSON</strong>
+            </br>- Modélisation de l'application <strong>Android</strong> et de son interface graphique
+      </div>
+
+          <!--Carousel Modal MailSearch-->
+          <div class="carousel slide carousel-fade carousel-thumbnails shadow-lg mb-5 mt-5" id="carousel-thumb3"
+            data-interval="false" data-ride="carousel">
+            <!-- Slides -->
+            <!-- Mettre un titre pour chaque slide -->
+            <div class="carousel-inner disable-user-select disable-user-drag" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block mx-auto" src="upload/KontactPhoto/Accueil_Kontact.PNG"
+                  alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block mx-auto" src="upload/KontactPhoto/MCD_Kontact.PNG"
+                  alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block mx-auto" src="upload/KontactPhoto/MenuNav_Kontact.PNG"
+                alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block mx-auto" src="upload/KontactPhoto/Page_Salon_Kontact.PNG"
+                  alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block mx-auto" src="upload/KontactPhoto/Page_Contact_Kontact.PNG"
+                  alt="Fifth slide">
+              </div>
+            </div>
+            <!-- Boutton Prev et Next -->
+            <a class="carousel-control-prev" href="#carousel-thumb3" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-thumb3" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <!-- Indicateurs -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-thumb3" data-slide-to="0" class="active">
+                <img class="thumbnails" src="upload/KontactPhoto/Accueil_Kontact.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb3" data-slide-to="1">
+                <img class="thumbnails" src="upload/KontactPhoto/MCD_Kontact.PNG"" width="100">
+              </li>
+              <li data-target="#carousel-thumb3" data-slide-to="2">
+                <img class="thumbnails" src="upload/KontactPhoto/MenuNav_Kontact.PNG"" width="100">
+              </li>
+              <li data-target="#carousel-thumb3" data-slide-to="3">
+                <img class="thumbnails" src="upload/KontactPhoto/Page_Salon_Kontact.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb3" data-slide-to="4">
+                <img class="thumbnails" src="upload/KontactPhoto/Page_Contact_Kontact.PNG" width="100">
+              </li>
+            </ol>
+          </div>
+      </br>
+      </br>
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h3 class="section-title text-center KontSection">Langages et Technologies utilisés</h3>
+          <div class="row mx-auto align">
+            <img class="img-logo" src="upload/logoDev/logoAndroid.png">
+            <img style="width: 200px; height: 100px;" src="upload/logoDev/logoSQLite.png">
+            <img class="img-logo" src="upload/logoDev/logoPGSQL.png">
+            <img class="ml-2 mr-4"style="width: 100px; height: 150px;" src="upload/logoDev/logoJava.png">
+            <img class="img-logo" src="upload/logoDev/logoSQL.png">
+            <img style="width: 200px; height: 70px;" src="upload/logoDev/logoOdoo.png">
+            <img class="img-logo mx-2" src="upload/logoDev/logoXML.png">
+            <img class="img-logo mx-2" src="upload/logoDev/logoJSON.png">
+            <!-- <img style="width: 250px; height: 200px;" src="upload/logoDev/logoWTS.png"> -->
+          </div>
+        </div>
+      </section>
+      <p style="font-size: 20px; font-family: Baukasten;">
+        <strong>Bilan de la mission : </strong>
+        </br>Web service mal maitrisé, il reste à synchronisé les données avec la base de données PgSQL
+        afin de rendre l'application complémentement fonctionnel pour terminer le projet.</p>
+
+      <div class="text-left">
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/eKara_Mission3_SLAM.pdf"> <i
+            class="far fa-file-pdf fa-2x"></i> PDF Cahier des charges "Kontact"</a>
+        </br>
+        <!-- <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/GrizzlyDevPhoto/SIO stage fiche compte rendu GrizzlyDev.pdf"> <i
+            class="far fa-file-pdf fa-2x"></i> PDF Compte rendu de Stage</a> -->
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- MODAL AppEval -->
+<div class="modal fade" id="modalAppEval" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+<div class="modal-dialog cascading-modal modal-xl" role="document">
+  <!-- Content -->
+  <div class="modal-content">
+    <!-- Header -->
+    <div class="modal-header mx-auto border-danger border-bottom disable-user-select disable-user-drag">
+      <img class="rounded-circle img-responsive border img-ico" style="width: 400px; height: 300px;" src="upload/LogoEntrepriseProjets/logoE-Kara2Noir.png"
+        alt="icoEKara">
+    </div>
+    <!-- Body -->
+    <div class="modal-body text-center mb-1">
+
+      <div class="text-center pb-5">
+        <h1 class="mt-1 mb-2">AppEval</h1>
+        <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Application informatique</p>
+        <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Gestion des recrutement</p>
+        <p class="text-muted" style="font-size: 18px; font-family: Baukasten;">e-Kara</p>
+      </div>
+
+      <div class="text-left mx-4">
+        <p style="font-size: 20px; font-family: Baukasten;">
+          <strong>Contexte</strong> : Projet Professionel Encadré par l'établissement Ella Fitzgerald en 2ème Année de BTS SIO
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Mise en situation</strong> : M. Grimaud souhaite qu’une même <strong>candidature</strong> puisse être évaluée par plusieurs personnes ;
+             un <strong>évaluateur</strong> est obligatoirement choisi parmi les collaborateurs du service des ressources humaines ;
+              ainsi, aussi bien le directeur des RH, que ses assistants sont amenés à étudier les candidatures</p>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Spécification Techniques</strong> : L’évaluation d’une candidature est établit par un RH. Une note (de 0 à 5) pour chacun
+            des <strong>critères d’évaluation</strong> est définis, il rédige un bref commentaire, et remplit d’un bonus/malus de - 10 à + 10 points le cas échéant,
+            chaque <strong>fiche d’évaluation</strong> est datée et signée par l’évaluateur. La somme des notes multipliées par le coefficient donnera une note final.
+            on affichera au format PDF, la liste des <strong>candidats</strong> avec leur note, leur moyenne et les 5 meilleurs</p>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Contraintes</strong> :
+            </br>- Manipuler beaucoup d'informations tout en modélisant l'application
+            </br>- Se répartir les taches et réunir les compétences adéquate 
+
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Démarche de réalisation proposée</strong> :
+            </br>- Modéliser plusieurs <strong>WindowsForm</strong> afin de respecter le processus d'évaluation
+            </br>- Séparer les <strong>fonctionnalités</strong> avec les membres du groupe
+            </br>- Découpage en <strong>sprint</strong> du projet
+            </br>- <strong>Documentation Technique</strong>
+            </br>- Elaboration d'une <strong>base de données</strong> qui accueillera les données de VideoRecrut
+            </br>- Collaborer avec la base de données <strong>PgSQL</strong> via l'<strong>ERP ODOO</strong> pour les informations des employés RH
+      </div>
+
+          <!--Carousel Modal MailSearch-->
+          <div class="carousel slide carousel-fade carousel-thumbnails shadow-lg mb-5 mt-5" id="carousel-thumb4"
+            data-interval="false" data-ride="carousel">
+            <!-- Slides -->
+            <!-- Mettre un titre pour chaque slide -->
+            <div class="carousel-inner disable-user-select disable-user-drag" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="upload/AppEvalPhoto/bddAppEval.PNG"
+                  alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/AppEvalPhoto/AppEval.PNG"
+                 alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/AppEvalPhoto/FormNoter.PNG"
+                  alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/AppEvalPhoto/Ajout Critere.PNG"
+                  alt="Fourth slide">
+              </div>
+            </div>
+            <!-- Boutton Prev et Next -->
+            <a class="carousel-control-prev" href="#carousel-thumb4" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-thumb4" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <!-- Indicateurs -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-thumb4" data-slide-to="0" class="active">
+                <img class="thumbnails" src="upload/AppEvalPhoto/bddAppEval.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb4" data-slide-to="1">
+                <img class="thumbnails" src="upload/AppEvalPhoto/AppEval.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb4" data-slide-to="2">
+                <img class="thumbnails" src="upload/AppEvalPhoto/FormNoter.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb4" data-slide-to="3">
+                <img class="thumbnails" src="upload/AppEvalPhoto/Ajout Critere.PNG" width="100">
+              </li>
+            </ol>
+          </div>
+      </br>
+      </br>
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h3 class="section-title text-center mb-5">Langages et Technologies utilisés</h3>
+          <div class="row mx-auto align">
+            <img class="img-logo" src="upload/logoDev/logoCsharp.png">
+            <img class="img-logo" src="upload/logoDev/logoPGSQL.png">
+            <img class="img-logo" src="upload/logoDev/logoSQL.png">
+            <img style="width: 200px; height: 70px;" src="upload/logoDev/logoOdoo.png">
+            <img class="img-logo mx-2" src="upload/logoDev/logoWamp.png">
+            <img class="img-logo" style="width: 250px; height: 150px;" src="upload/logoDev/logoGitHub.png">
+            <img class="img-logo" style="width: 250px; height: 150px;" src="upload/logoDev/logoVS.png">
+            <!-- <img style="width: 250px; height: 200px;" src="upload/logoDev/logoWTS.png"> -->
+          </div>
+        </div>
+      </section>
+      <p style="font-size: 20px; font-family: Baukasten;">
+        <strong>Bilan de la mission : </strong>
+        </br>Ce projet a été particulièrement difficile à mettre en place, car il demande la mise en oeuvre d'une coopération
+        développeurs et technicien réseaux conséquente, ce projet à quand même pu être mené sur la bonne voie.</p>
+
+      <div class="text-left">
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/AppEvalPhoto/eKara_Mission2_SLAM.pdf"> <i
+            class="far fa-file-pdf fa-2x"></i> PDF Contexte "AppEval"</a>
+        </br>
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/AppEvalPhoto/AppNormesDev.pdf"> <i
+            class="far fa-file-pdf fa-2x"></i> PDF Normes de Développement</a>
+        </br>
+        <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+          href="upload/AppEvalPhoto/Modele_FicheIndividuelleCandidature.pdf"> <i
+            class="far fa-file-pdf fa-2x"></i> PDF Modele du PDF a généré</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- MODAL VideoRecrut-->
+<div class="modal fade" id="modalVideoRecrut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal modal-xl" role="document">
+    <!-- Content -->
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-header mx-auto border-danger border-bottom disable-user-select disable-user-drag">
+        <img class="rounded-circle img-responsive border img-ico" style="width: 400px; height: 300px;"
+          src="upload/LogoEntrepriseProjets/logoE-Kara2Noir.png" alt="icoEKara">
+      </div>
+      <!-- Body -->
+      <div class="modal-body text-center mb-1">
+
+        <div class="text-center pb-5">
+          <h1 class="mt-1 mb-2">VideoRecrut</h1>
+          <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Application web</p>
+          <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Gestion des offres emplois</p>
+          <p class="text-muted" style="font-size: 18px; font-family: Baukasten;">e-Kara</p>
+        </div>
+
+        <div class="text-left mx-4">
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Contexte</strong> : Projet Professionel Encadré par l'établissement Ella Fitzgerald en 2ème Année de
+            BTS SIO
+            <p style="font-size: 20px; font-family: Baukasten;">
+              <strong>Mise en situation</strong> : M. Grimaud souhaite que son <strong>application web</strong>, permette le recrutement d'employés informatique
+            via des <strong>offres d'emploi</strong> mis à disposition. On pourra y publié des documents numérique et vidéo, et notifiera le candidat
+            du statut de sa candidature. Il faut évidemment <strong>s'inscrire</strong> sur le site et <strong>se connecté</strong> pour pouvoir postuler</p>
+            <p style="font-size: 20px; font-family: Baukasten;">
+              <strong>Spécification Techniques</strong> : Une offre d'emploi à une <strong>date limite</strong> et ne sera plus "postulable", ni visible le cas échéant, 
+              la candidature aura une <strong>lettre de motivation</strong>, ainsi qu'un <strong>CV vidéo et numérique</strong> et devra être stocké dans un dossier à la source via PHP. Mettre 
+              un espace <strong>connexion/inscription</strong> pour le candidat. Les RH peuvent <strong>modifiés</strong> une offre, en <strong>ajouté</strong> une et <strong>voir les candidatures de chaque offre</strong>, implémenter
+              les fonctions en <strong>PHP</strong> pour modifier la Base de données. L'application sera en <strong>anglais et français</strong> grâce à <strong>AJAX/JQuery</strong>.</p>
+            <p style="font-size: 20px; font-family: Baukasten;">
+              <strong>Contraintes</strong> :
+              </br>- Définir le <strong>niveau d'habilitation</strong> de chaque utilisateur
+              </br>- Prendre connaissances des <strong>requêtes Asynchrone</strong>
+              </br>- Gérer l'<strong>upload</strong> de document
+
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Démarche de réalisation proposée</strong> :
+                </br>- Elaboration d'une <strong>base de données</strong> en rapport avec les besoins du site
+                </br>- Modéliser un espace <strong>Connexion et Inscription</strong>
+                </br>- Page affichant les offres d'emploi
+                </br>- Gérer les <strong>types d'utilisateurs</strong> via PHP
+                </br>- Pouvoir postuler en cliquant sur l'offre
+        </div>
+
+        <!--Carousel Modal MailSearch-->
+        <div class="carousel slide carousel-fade carousel-thumbnails shadow-lg mb-5 mt-5" id="carousel-thumb5"
+          data-interval="false" data-ride="carousel">
+          <!-- Slides -->
+          <!-- Mettre un titre pour chaque slide -->
+          <div class="carousel-inner disable-user-select disable-user-drag" role="listbox">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="upload/VideoRecrutPhoto/bddVideoRecrut.PNG" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="upload/VideoRecrutPhoto/VideoRecrut.PNG" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="upload/VideoRecrutPhoto/ConnecterRH.PNG" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="upload/VideoRecrutPhoto/ModifOffre.PNG" alt="Fourth slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="upload/VideoRecrutPhoto/ajoutOffre.PNG" alt="Fourth slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="upload/VideoRecrutPhoto/ConnecterCand.PNG" alt="Fourth slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="upload/VideoRecrutPhoto/PostulerOffre.PNG" alt="Fourth slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="upload/VideoRecrutPhoto/ProfilCand.PNG" alt="Fourth slide">
+            </div>
+          </div>
+          <!-- Boutton Prev et Next -->
+          <a class="carousel-control-prev" href="#carousel-thumb5" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-thumb5" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          <!-- Indicateurs -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-thumb5" data-slide-to="0" class="active">
+              <img class="thumbnails" src="upload/VideoRecrutPhoto/bddVideoRecrut.PNG" width="100">
+            </li>
+            <li data-target="#carousel-thumb5" data-slide-to="1">
+              <img class="thumbnails" src="upload/VideoRecrutPhoto/VideoRecrut.PNG" width="100">
+            </li>
+            <li data-target="#carousel-thumb5" data-slide-to="2">
+              <img class="thumbnails" src="upload/VideoRecrutPhoto/ConnecterRH.PNG" width="100">
+            </li>
+            <li data-target="#carousel-thumb5" data-slide-to="3">
+              <img class="thumbnails" src="upload/VideoRecrutPhoto/ModifOffre.PNG" width="100">
+            </li>
+            <li data-target="#carousel-thumb5" data-slide-to="4">
+              <img class="thumbnails" src="upload/VideoRecrutPhoto/ajoutOffre.PNG" width="100">
+            </li>
+            <li data-target="#carousel-thumb5" data-slide-to="5">
+              <img class="thumbnails" src="upload/VideoRecrutPhoto/ConnecterCand.PNG" width="100">
+            </li>
+            <li data-target="#carousel-thumb5" data-slide-to="6">
+              <img class="thumbnails" src="upload/VideoRecrutPhoto/PostulerOffre.PNG" width="100">
+            </li>
+            <li data-target="#carousel-thumb5" data-slide-to="7">
+              <img class="thumbnails" src="upload/VideoRecrutPhoto/ProfilCand.PNG" width="100">
+            </li>
+            </ol>
+        </div>
+        </br>
+        </br>
+        <section class="py-5 bg-light">
+          <div class="container">
+            <h3 class="section-title text-center mb-5">Langages et Technologies utilisés</h3>
+            <div class="row mx-auto align">
+              <img class="img-logo" src="upload/logoDev/logoHTML5.png">
+              <img style="width: 100px; height: 150px;" src="upload/logoDev/logoCSS.png">
+              <img class="img-logo ml-4" src="upload/logoDev/logoPHP.jpg">
+              <img class="img-logo" src="upload/logoDev/logoSQL.png">
+              <img class="img-logo" src="upload/logoDev/logoWamp.png">
+              <img style="width: 280px; height: 170px;" src="upload/logoDev/logoJS.png">
+              <img class="img-logo" style="width: 250px; height: 150px;" src="upload/logoDev/logoGitHub.png">
+              <img class="img-logo" style="width: 190px; height: 150px;" src="upload/logoDev/logoAtom.png">
+
+            </div>
+          </div>
+        </section>
+        <p style="font-size: 20px; font-family: Baukasten;">
+          <strong>Bilan de la mission : </strong>
+          </br>Des difficultés pour mettre en commun notre code pour cause de mauvaise connaissance de Github, mais fonctionnalité,
+          utilisateur ajoutter, aficher modifier...entièrement implémenter.</p>
+
+        <div class="text-left">
+          <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+            href="upload/VideoRecrutPhoto/Mission_1_SLAM_SISR_EKARA.pdf"> <i class="far fa-file-pdf fa-2x"></i> PDF Contexte "VideoRecrut"</a>
+          <!-- </br>
+          <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+            href="upload/AppEvalPhoto/AppNormesDev.pdf"> <i class="far fa-file-pdf fa-2x"></i> PDF Normes de
+            Développement</a> -->
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL Armée de Terre-->
+<div class="modal fade" id="modalArmeeTerre" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal modal-xl" role="document">
+      <!-- Content -->
+      <div class="modal-content">
+        <!-- Header -->
+        <div class="modal-header mx-auto border-danger border-bottom disable-user-select disable-user-drag">
+          <img class="rounded-circle img-responsive border img-ico" style="width: 400px; height: 300px;"
+            src="upload/LogoEntrepriseProjets/logoSailingC&TNoir.png" alt="icoSC&T">
+        </div>
+        <!-- Body -->
+        <div class="modal-body text-center mb-1">
+  
+          <div class="text-center pb-5">
+            <h1 class="mt-1 mb-2">Armée de Terre</h1>
+            <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Application web</p>
+            <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Maintenance évolutive - Formulaire</p>
+            <p class="text-muted" style="font-size: 18px; font-family: Baukasten;">Sailing Communications & Technologies</p>
+          </div>
+  
+          <div class="text-left mx-4">
+            <p style="font-size: 20px; font-family: Baukasten;">
+              <strong>Contexte</strong> : Stage de 1ère Année de BTS SIO dans l'entreprise Sailing Communications & Technologies
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Mise en situation</strong> : M. Boireau Dirigeant de l'entreprise, veut tout d'abord testé mon niveau et me donne une petite mission
+              celle de crée une <strong>interface visuel d'album de musique</strong> simple mais optimisé en fonction de ces normes. Puis par la suite, me faire travailler sur un projet existant
+              ou il faut modéliser un <strong>double formulaire</strong> pour l'armée de terre</p>
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Spécification Techniques</strong> : Il fallait créé un site sur des groupe de musique, listé leur albums, chansons, et membre du groupe de page en page via <strong>PHP, HTML, CSS, SQL</strong>.
+              Pour ce qui est du double formulaire il fallait optimisé en PHP, <strong>JSON, et AJAX</strong> l'affichage en fonction du profils souhaité et des normes graphiques donné via le <strong>CMS de l'entreprise WysiUp</strong></p>
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Contraintes</strong> :
+                </br>- Manipulés du <strong>JSON, AJAX</strong> jusque là jamais aborder
+                </br>- Travaille de haute connaissances dépassant de loin mon niveau
+                </br>- Forte documentation et prise de connaissances
+                </br>- Optimiser son code et s'adapter aux <strong>normes technique</strong> de l'entreprise
+
+                <p style="font-size: 20px; font-family: Baukasten;">
+                  <strong>Démarche de réalisation proposée</strong> :
+                  </br>- Elaboration d'une <strong>base de données</strong> en rapport avec les besoins du site de musique
+                  </br>- Modéliser le site sur plusieurs pages
+                  </br>- <strong>Documentation technique</strong>
+                  </br>- <strong>Prototypé</strong> l'aspect fonctionnel des formulaires via des données JSON fictive
+                  </br>- Optimisation du code au fur et à mesure de ma <strong>prise de connaissance</strong>
+          </div>
+
+          <!--Carousel Modal MailSearch-->
+          <div class="carousel slide carousel-fade carousel-thumbnails shadow-lg mb-5 mt-5" id="carousel-thumb6"
+            data-interval="false" data-ride="carousel">
+            <!-- Slides -->
+            <!-- Mettre un titre pour chaque slide -->
+            <div class="carousel-inner disable-user-select disable-user-drag" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="upload/SailingPhoto/refonte bdd.png" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/SailingPhoto/FormGroupe.png" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/SailingPhoto/WysiUp.png" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/SailingPhoto/ProfilRCTLoad.png" alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/SailingPhoto/ProfilRCTOnModif.png" alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/SailingPhoto/ProfilAMRLoad.png" alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/SailingPhoto/ProfilAMROnModif.png"Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/SailingPhoto/ProfilRCTConsoleLogJSON2.png" alt="Fourth slide">
+              </div>
+            </div>
+            <!-- Boutton Prev et Next -->
+            <a class="carousel-control-prev" href="#carousel-thumb6" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-thumb6" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <!-- Indicateurs -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-thumb6" data-slide-to="0" class="active">
+                <img class="thumbnails" src="upload/SailingPhoto/refonte bdd.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb6" data-slide-to="1">
+                <img class="thumbnails" src="upload/SailingPhoto/FormGroupe.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb6" data-slide-to="2">
+                <img class="thumbnails" src="upload/SailingPhoto/WysiUp.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb6" data-slide-to="3">
+                <img class="thumbnails" src="upload/SailingPhoto/ProfilRCTLoad.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb6" data-slide-to="4">
+                <img class="thumbnails" src="upload/SailingPhoto/ProfilRCTOnModif.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb6" data-slide-to="5">
+                <img class="thumbnails" src="upload/SailingPhoto/ProfilAMRLoad.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb6" data-slide-to="6">
+                <img class="thumbnails" src="upload/SailingPhoto/ProfilAMROnModif.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb6" data-slide-to="7">
+                <img class="thumbnails" src="upload/SailingPhoto/ProfilRCTConsoleLogJSON2.png" width="100">
+              </li>
+              </ol>
+          </div>
+          </br>
+          </br>
+          <section class="py-5 bg-light">
+            <div class="container">
+              <h3 class="section-title text-center mb-5">Langages et Technologies utilisés</h3>
+              <div class="row mx-auto align">
+                <img class="img-logo" src="upload/logoDev/logoHTML5.png">
+                <img style="width: 100px; height: 150px;" src="upload/logoDev/logoCSS.png">
+                <img class="img-logo ml-4" src="upload/logoDev/logoPHP.jpg">
+                <img class="img-logo" src="upload/logoDev/logoSQL.png">
+                <img class="img-logo" src="upload/logoDev/logoWamp.png">
+                <img style="width: 280px; height: 170px;" src="upload/logoDev/logoJS.png">
+                <img class="img-logo" style="width: 200px; height: 150px;" src="upload/logoDev/logoJSON.png">
+                <img class="img-logo" style="width: 200px; height: 150px;" src="upload/logoDev/logoAJAX.jpg">
+                <img class="img-logo" style="width: 190px; height: 150px;" src="upload/logoDev/logoAtom.png">
+  
+              </div>
+            </div>
+          </section>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Bilan de la mission : </strong>
+            </br>J'ai appris à faire preuve de beaucoup d'autonomie et à travailler sur plusieurs technologies,
+             avec un flux d'information très importante qui nécessite une forte compréhension, mes prises d'initiative et mon assurance
+             on grandi suite à ce stage qui m'a endurci.</p>
+  
+          <div class="text-left">
+            <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+              href="upload/SailingPhoto/SIO-Missions-réaliséesSailing.pdf"> <i class="far fa-file-pdf fa-2x"></i> PDF Missions de stage</a>
+            </br>
+            <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+              href="upload/SailingPhoto/SIO-stage-fiche-compte-renduSailing.pdf"> <i class="far fa-file-pdf fa-2x"></i> PDF Compte rendu de stage</a>
+  
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <!-- MODAL Image et Musique -->
+<div class="modal fade" id="modalImaEtMus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal modal-xl" role="document">
+      <!-- Content -->
+      <div class="modal-content">
+        <!-- Header -->
+        <div class="modal-header mx-auto border-danger border-bottom disable-user-select disable-user-drag">
+          <img class="rounded-circle img-responsive border img-ico" style="width: 400px; height: 300px;"
+            src="upload/LogoEntrepriseProjets/logoImEtMusNoir.png" alt="icoSC&T">
+        </div>
+        <!-- Body -->
+        <div class="modal-body text-center mb-1">
+  
+          <div class="text-center pb-5">
+            <h1 class="mt-1 mb-2">Image et Musique</h1>
+            <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Application web</p>
+            <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Site vitrine informatique/audiovisuel</p>
+            <p class="text-muted" style="font-size: 18px; font-family: Baukasten;">Image et Musique</p>
+          </div>
+  
+          <div class="text-left mx-4">
+            <p style="font-size: 20px; font-family: Baukasten;">
+              <strong>Contexte</strong> : Projet Professionel Encadré avec l'entreprise Image et Musique
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Mise en situation</strong> : Dans le cadre de notre formation il nous était proposé d'offrir nos compétences aux service d'une entreprise
+                nous avons choisit, M. ESTEVE Dirigeant de l'entreprise Image et Musique, et lui avons énoncer notre projet de <strong>modéliser un site web</strong> pour sa société. Le but : 
+                acctroitre sa <strong>notoriété</strong> et qu'il possède une meilleur <strong>visibilité</strong> sur sa clientèle</p>
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Spécification Techniques</strong> : Il fallait créé un site en <strong>HTML,CSS,PHP et SQL</strong> pour géré ces produits, faire un espace ou des personnes peuvent
+              <strong>s'inscrire et se connecter</strong>, afin de les fidéliser et <strong>montrer ces services</strong></p>
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Contraintes</strong> :
+                </br>- Aucune
+
+                <p style="font-size: 20px; font-family: Baukasten;">
+                  <strong>Démarche de réalisation proposée</strong> :
+                  </br>- Elaboration d'une <strong>base de données</strong> listant ces produits et gére les <strong>niveaux d'habilitation</strong>
+                  </br>- Modéliser le site en avec des liens vers les réseaus sociaux
+                  </br>- Créé un espace connexion et inscription, puis un profil
+          </div>
+  
+          <!--Carousel Modal MailSearch-->
+          <div class="carousel slide carousel-fade carousel-thumbnails shadow-lg mb-5 mt-5" id="carousel-thumb7"
+            data-interval="false" data-ride="carousel">
+            <!-- Slides -->
+            <!-- Mettre un titre pour chaque slide -->
+            <div class="carousel-inner disable-user-select disable-user-drag" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="upload/ImaEtMus/bddImaEtMus.PNG" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/ImaEtMus/Page d_accueil Site.PNG" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/ImaEtMus/formulaire.PNG" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/ImaEtMus/connexion.PNG" alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/ImaEtMus/produits.PNG" alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/ImaEtMus/depannage.PNG" alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/ImaEtMus/profil.PNG"Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/ImaEtMus/modif profil.PNG" alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/ImaEtMus/modif produits.PNG" alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/ImaEtMus/contact.PNG" alt="Fourth slide">
+              </div>
+            </div>
+            <!-- Boutton Prev et Next -->
+            <a class="carousel-control-prev" href="#carousel-thumb7" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-thumb7" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <!-- Indicateurs -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-thumb7" data-slide-to="0" class="active">
+                <img class="thumbnails" src="upload/ImaEtMus/bddImaEtMus.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb7" data-slide-to="1">
+                <img class="thumbnails" src="upload/ImaEtMus/Page d_accueil Site.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb7" data-slide-to="2">
+                <img class="thumbnails" src="upload/ImaEtMus/formulaire.PNG width="100">
+              </li>
+              <li data-target="#carousel-thumb7" data-slide-to="3">
+                <img class="thumbnails" src="upload/ImaEtMus/connexion.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb7" data-slide-to="4">
+                <img class="thumbnails" src="upload/ImaEtMus/produits.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb7" data-slide-to="5">
+                <img class="thumbnails" src="upload/ImaEtMus/depannage.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb7" data-slide-to="6">
+                <img class="thumbnails" src="upload/ImaEtMus/profil.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb7" data-slide-to="7">
+                <img class="thumbnails" src="upload/ImaEtMus/modif profil.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb7" data-slide-to="8">
+                <img class="thumbnails" src="upload/ImaEtMus/modif produits.PNG" width="100">
+              </li>
+              <li data-target="#carousel-thumb7" data-slide-to="9">
+                <img class="thumbnails" src="upload/ImaEtMus/contact.PNG" width="100">
+              </li>
+              </ol>
+          </div>
+          </br>
+          </br>
+          <section class="py-5 bg-light">
+            <div class="container">
+              <h3 class="section-title text-center mb-5">Langages et Technologies utilisés</h3>
+              <div class="row mx-auto align">
+                <img class="img-logo" src="upload/logoDev/logoHTML5.png">
+                <img style="width: 100px; height: 150px;" src="upload/logoDev/logoCSS.png">
+                <img class="img-logo ml-4" src="upload/logoDev/logoPHP.jpg">
+                <img class="img-logo" src="upload/logoDev/logoSQL.png">
+                <img class="img-logo" src="upload/logoDev/logoWamp.png">
+                <img style="width: 280px; height: 170px;" src="upload/logoDev/logoJS.png">
+                <img class="img-logo" style="width: 190px; height: 150px;" src="upload/logoDev/logoAtom.png">
+  
+              </div>
+            </div>
+          </section>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Bilan de la mission : </strong>
+            </br>La mission fut réussi le dirigeant nous félicita et exprima un avis positif sur le rendu mais ne prendra finalement pas la
+             solution car il ne voulait financer une plateforme d'herbegement.</p>
+  
+          <div class="text-left">
+            <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+              href=""> <i class="far fa-file-pdf fa-2x"></i> PDF Cahier des Charges</a>
+   
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+    <!-- MODAL No Loading -->
+<div class="modal fade" id="modalNLD" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal modal-xl" role="document">
+      <!-- Content -->
+      <div class="modal-content">
+        <!-- Header -->
+        <div class="modal-header mx-auto border-danger border-bottom disable-user-select disable-user-drag">
+          <img class="rounded-circle img-responsive border img-ico" style="width: 400px; height: 300px;"
+            src="upload/LogoEntrepriseProjets/logoNLD3Noir.png" alt="icoSC&T">
+        </div>
+        <!-- Body -->
+        <div class="modal-body text-center mb-1">
+  
+          <div class="text-center pb-5">
+            <h1 class="mt-1 mb-2">No Loading</h1>
+            <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Application web</p>
+            <p class="mx-1 my-1" style="font-size: 20px; font-family: Baukasten;">Site vitrine jeux-vidéos</p>
+            <p class="text-muted" style="font-size: 18px; font-family: Baukasten;">No Loading</p>
+          </div>
+  
+          <div class="text-left mx-4">
+            <p style="font-size: 20px; font-family: Baukasten;">
+              <strong>Contexte</strong> : Projet Professionel Encadré avec l'entreprise No Loading
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Mise en situation</strong> : Dans le cadre de notre formation il nous était proposé d'offrir nos compétences aux service d'une entreprise
+                nous avons choisit, M. POHREL Dirigeant de l'entreprise No Loading, et lui énoncer notre projet de <strong>modéliser un site web</strong> pour sa société. Le but 
+              se faire connaitre et une <strong>visibilité</strong> sur sa clientèle etendre la <strong>zone d'influence</strong> de l'entreprise</p>
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Spécification Techniques</strong> : Il fallait créé un site en <strong>HTML,CSS,PHP et SQL</strong> pour géré ces produits, faire un espace ou des personnes peuvent
+              <strong>s'inscrire et se connecter</strong></p>
+              <p style="font-size: 20px; font-family: Baukasten;">
+                <strong>Contraintes</strong> :
+                </br>- Aucune
+
+                <p style="font-size: 20px; font-family: Baukasten;">
+                  <strong>Démarche de réalisation proposée</strong> :
+                  </br>- Elaboration d'une <strong>base de données</strong> listant ces produits et gére les utilisateurs
+                  </br>- Fonder une <strong>Section produits d'actualités</strong>
+                  </br>- Créé un espace connexion et inscription
+                  </br>- S'aider des publicités et mettre en liens des réseaux sociaux
+          </div>
+  
+          <!--Carousel Modal MailSearch-->
+          <div class="carousel slide carousel-fade carousel-thumbnails shadow-lg mb-5 mt-5" id="carousel-thumb8"
+            data-interval="false" data-ride="carousel">
+            <!-- Slides -->
+            <!-- Mettre un titre pour chaque slide -->
+            <div class="carousel-inner disable-user-select disable-user-drag" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="upload/NLD/DPrevisionelle.png" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/NLD/bddNLD.png" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/NLD/Reunion.png" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="upload/NLD/NoLoading.png" alt="Fourth slide">
+              </div>
+            </div>
+            <!-- Boutton Prev et Next -->
+            <a class="carousel-control-prev" href="#carousel-thumb7" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-thumb7" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <!-- Indicateurs -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-thumb8" data-slide-to="0" class="active">
+                <img class="thumbnails" src="upload/NLD/DPrevisionelle.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb8" data-slide-to="1">
+                <img class="thumbnails" src="upload/NLD/bddNLD.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb8" data-slide-to="2">
+                <img class="thumbnails" src="upload/NLD/Reunion.png" width="100">
+              </li>
+              <li data-target="#carousel-thumb8" data-slide-to="3">
+                <img class="thumbnails" src="upload/NLD/NoLoading.png" width="100">
+              </li>
+              </ol>
+          </div>
+          </br>
+          </br>
+          <section class="py-5 bg-light">
+            <div class="container">
+              <h3 class="section-title text-center mb-5">Langages et Technologies utilisés</h3>
+              <div class="row mx-auto align">
+                <img class="img-logo" src="upload/logoDev/logoHTML5.png">
+                <img style="width: 100px; height: 150px;" src="upload/logoDev/logoCSS.png">
+                <img class="img-logo ml-4" src="upload/logoDev/logoPHP.jpg">
+                <img class="img-logo" src="upload/logoDev/logoSQL.png">
+                <img class="img-logo" src="upload/logoDev/logoEasyphp.png">
+                <img style="width: 280px; height: 170px;" src="upload/logoDev/logoJS.png">
+                <img class="img-logo" style="width: 190px; height: 150px;" src="upload/logoDev/logoNotepadd.png">
+  
+              </div>
+            </div>
+          </section>
+          <p style="font-size: 20px; font-family: Baukasten;">
+            <strong>Bilan de la mission : </strong>
+            </br>Notre groupe réussi le projet et finalisé la partie graphique, la partie fonctionnelle comme l'inscription et la connexion ne fonctionner pas
+          du à un manque de connaissance sur l'administration d'une base de données SQL</p>
+  
+          <div class="text-left">
+            <a class="no-underline" style="font-size: 20px; font-family: Baukasten;" target="_blank"
+              href="upload/NLD/NLD Cahier Des Charges.odt"> <i class="far fa-file-pdf fa-2x"></i> PDF Cahier des Charges</a>
+   
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  
+  <!-- Toujours appelé le fichier JQuery avant, Uncaught Error Exeption $fn -->
+  <script type="text/javascript" src="bootstrap-4.3.1/js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="bootstrap-4.3.1/js/popper-1.14.7.js"></script>
+  <script type="text/javascript" src="bootstrap-4.3.1/js/bootstrap.js"></script>
+  <!-- fichier bibliothèque vue.js -->
+  <script type="text/javascript" src="bootstrap-4.3.1/js/vue-2.6.10.js"></script>
+  <!-- fichier plugin contenant la bibliotheque du carousel 3d -->
+  <script type="text/javascript" src="vue-carousel-3d\dist\vue-carousel-3d.min.js"></script>
+  <!-- fichier où le carousel3d est créer -->
+  <script src="bootstrap-4.3.1\js\carousel3d-vue.js"></script>
+  <!-- fichier bibliothèque chart.js -->
+  <script type="text/javascript" src="chart.js/chart.js"></script>
+  <!-- fichier Chart Front-end Compétences -->
+  <script type="text/javascript" src="chart.js/FrontChart.js"></script>
+  <!-- fichier Chart Back-end Compétences -->
+  <script type="text/javascript" src="chart.js/BackChart.js"></script>
+  <!-- fichier Chart Langage de Programmation Compétences -->
+  <script type="text/javascript" src="chart.js/PrograChart.js"></script>
+
+</body>
+</html>
